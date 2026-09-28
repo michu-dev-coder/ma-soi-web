@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Ma Sói Web</title>
+<link rel="stylesheet" href="style.css"/>
+<script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+<main>
+<section id="home" class="card">
+  <h1>🐺 Ma Sói Web</h1><p>Người thật chơi • Web làm quản trò</p>
+  <input id="name" placeholder="Tên của bạn" maxlength="24"/>
+  <button id="create">Tạo phòng</button>
+  <div class="sep">hoặc</div>
+  <input id="code" placeholder="Mã phòng" maxlength="4"/>
+  <button id="join" class="secondary">Vào phòng</button>
+  <p id="homeErr" class="err"></p>
+</section>
+<section id="game" class="hidden">
+  <div class="top card"><div><b>Phòng <span id="roomCode"></span></b><div id="phase"></div></div><button id="leave" class="ghost">Thoát</button></div>
+  <div id="winner" class="card hidden"></div>
+  <div class="card"><h2>Vai trò của bạn</h2><div id="roleBox">Chưa bắt đầu</div><div id="nightInfo"></div></div>
+  <div class="card"><h2>Người chơi</h2><div id="players"></div></div>
+  <div id="actions" class="card"><h2>Hành động</h2><div id="actionBody"></div></div>
+  <div class="card"><h2>Nhật ký</h2><div id="log"></div></div>
+  <div class="card"><h2>Chat</h2><select id="chatChannel"><option value="public">Chat chung</option></select><div id="chatLog" class="chatlog"></div><div class="row"><input id="chatInput" placeholder="Nhập tin nhắn"/><button id="sendChat">Gửi</button></div></div>
+</section>
+</main>
+<script src="app.js"></script>
+</body></html>
